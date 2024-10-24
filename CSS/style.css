@@ -46,6 +46,7 @@ body {
   opacity: 0;
   z-index: 0;
 }
+
 .active {
   opacity: 1;
   z-index: 2;
@@ -118,6 +119,12 @@ body {
   outline: none;
   color: white;
 }
+.input-box .input-box-col {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 3%;
+}
 ::placeholder {
   color: white;
   font-size: 15px;
@@ -128,8 +135,12 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 27px;
+  color: #ffeba7;
 }
+
 .forgot-password a {
+  display: flex;
+  justify-content: end;
   padding-left: 8px;
   color: white;
   text-decoration: none;
@@ -181,4 +192,11 @@ body {
 .social-login-box:hover {
   background-color: #ffeba7;
   transform: scale(0.8);
+}
+
+#remember-me-check {
+  padding-left: 8px;
+}
+.remember-me label {
+  color: white;
 }

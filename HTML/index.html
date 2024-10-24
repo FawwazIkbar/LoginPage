@@ -28,13 +28,15 @@
         <div class="form-input">
           <!-- email -->
           <div class="input-box">
-            <input type="email" class="inputs input-field" placeholder="Email" />
-            <img src="../IMG/img-email.png" class="icon" alt="img-email" />
+            <input type="email" class="inputs input-field" placeholder="Email" required/>
+            <ion-icon name="mail-outline" class="icon"></ion-icon>
           </div>
           <!-- password -->
           <div class="input-box">
-            <input type="password" class="inputs input-field" placeholder="Password" />
-            <img src="../IMG/img-lock.png" class="icon" alt="img-password" />
+            <input type="password" class="inputs input-field" oninput=" changeIcon(this.value)" id="logPassword" placeholder="Password" required />
+           
+            <ion-icon name="lock-closed-outline" class="icon" id="log-pass-icon" onclick="myLogPassword()"></ion-icon>
+ 
           </div>
            <!-- forgot password -->
            <div class="forgot-password">
@@ -42,7 +44,7 @@
           </div>
             <!-- login button -->
             <div class="input-box">
-              <button type="submit" class="btn-login">Submit</button>
+              <button type="submit" class="btn-login">Sign-in</button>
             </div>
           </div>
           <div class="another-login">
@@ -71,52 +73,48 @@
           <!-- box regist form -->
         </div>
         <div class="form-input">
+          <div class="input-box">
+            <div class="input-box-col">
+              <input type="text" class="inputs input-field" placeholder="First Name" required />
+              <input type="text" class="inputs input-field" placeholder="Last Name" required />
+              
+            </div>
+           
+          </div>
           <!-- username -->
           <div class="input-box">
-            <input type="text" class="inputs input-field" placeholder="Username" />
-            <img src="../IMG/img-user.png" class="icon" alt="img-email" />
+            <input type="text" class="inputs input-field" placeholder="Username" required />
+            <ion-icon name="person-outline" class="icon" ></ion-icon>
           </div>
           <!-- email -->
           <div class="input-box">
-            <input type="email" class="inputs input-field" placeholder="Email" />
-            <img src="../IMG/img-email.png" class="icon" alt="img-email" />
+            <input type="email" class="inputs input-field" placeholder="Email" required />
+            <ion-icon name="mail-outline" class="icon"></ion-icon>
           </div>
           <!-- password -->
           <div class="input-box">
-            <input type="password" class="inputs input-field" placeholder="Password" />
-            <img src="../IMG/img-lock.png" class="icon" alt="img-password" />
+            <input type="password" class="inputs input-field" oninput=" changeIcon(this.value)" id="regPassword" placeholder="Password" required/>
+          
+            <ion-icon name="lock-closed-outline" class="icon" id="reg-pass-icon" onclick="myRegPassword()"></ion-icon>
+
           </div>
-           <!-- forgot password -->
+           <!-- rememberme -->
            <div class="remember-me">
            <input type="checkbox"id="remember-me-check">
            <label for="checkbox">Remember Me</label>
           </div>
-            <!-- login button -->
+            <!-- register button -->
             <div class="input-box">
-              <button type="submit" class="btn-login">Submit</button>
+              <button type="submit" class="btn-login">Sign-up</button>
             </div>
           </div>
-          <div class="another-login">
-            <span>~~~ Or Login With ~~~</span>
-          </div>
-          <div class="sosmed-login">
-            <div class="social-login-box">
-              <img src="../IMG/img-google.png" class="sosmed-login-icon" alt="">
-            </div>
-            <div class="social-login-box">
-              <img src="../IMG/img-facebook.png" class="sosmed-login-icon" alt="">
-            </div>
-            <div class="social-login-box">
-              <img src="../IMG/img-git.png" class="sosmed-login-icon" alt="">
-            </div>
-            <div class="social-login-box">
-              <img src="../IMG/img-x.png" class="sosmed-login-icon" alt="">
-            </div>
-          </div>
+        
       </form>
     </div>
 
     <script src="../JS/JQuery.js"></script>
     <script src="../JS/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
