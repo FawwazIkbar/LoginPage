@@ -4,61 +4,119 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign-in & Sign-up Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="container form-content">
-      <div class="form-header d-flex justify-content-center">
-        <button type="button" class="btn-box-1 me-3" id="login">Sign In</button>
-        <button type="button" class="btn-box-2" id="register">Sign Up</button>
-      </div>
-      <form>
-        <div class="form-title d-flex justify-content-center mb-2">
+    <div class="form-container">
+      <!-- Button form -->
+      <div class="form-col">
+        <div class="btn-box">
+          <button type="button" class="btn bt-1" id="login">Sign In</button>
+          <button type="button" class="btn btn-2" id="register">Sign Up</button>
+        </div>
+     
+      <!-- login form -->
+      <form class="form-box login-form">
+        <div class="form-title">
           <span>Sign In</span>
+          <!-- box login form -->
         </div>
         <div class="form-input">
-          <div class=" input-box mb-2">
-            <input type="email" class="input-field" id="exampleInputEmail1" placeholder="Email" />
+          <!-- email -->
+          <div class="input-box">
+            <input type="email" class="inputs input-field" placeholder="Email" />
             <img src="../IMG/img-email.png" class="icon" alt="img-email" />
-            
-            </svg>
           </div>
-          <div class="mb-2 input-box">
-            <input type="password" id="exampleInputPassword1" class="input-field" placeholder="Password" />
+          <!-- password -->
+          <div class="input-box">
+            <input type="password" class="inputs input-field" placeholder="Password" />
             <img src="../IMG/img-lock.png" class="icon" alt="img-password" />
           </div>
+           <!-- forgot password -->
            <div class="forgot-password">
-            <a href="#">forgot-password ?</a>
-           </div>
-          
-          <div class="d-flex justify-content-center align-items-center mt-4" ><button type="submit" class="btn-login">Submit</button></div>
-          
-          <div class="another-login d-flex  justify-content-center align-items-center my-2 ">
-            <h1>----- Or Login With -----</h1>
+            <a href="#">Forgot-password ?</a>
           </div>
-          <div class="sosmed-login d-flex justify-content-center align-items-center">
-            <div class="sosmed-login-box ">
-              <img src="../IMG/img-google.png" alt="Google">
-            </div>
-            <div class="sosmed-login-box ms-5">
-              <img src="../IMG/img-facebook.png" alt="FaceBook">
-            </div>
-            <div class="sosmed-login-box ms-5">
-              <img src="../IMG/img-git.png" alt="Git-Hub">
-            </div>
-            <div class="sosmed-login-box ms-5">
-              <img src="../IMG/img-x.png" alt="Git-Hub">
+            <!-- login button -->
+            <div class="input-box">
+              <button type="submit" class="btn-login">Submit</button>
             </div>
           </div>
+          <div class="another-login">
+            <span>~~~ Or Login With ~~~</span>
+          </div>
+          <div class="sosmed-login">
+            <div class="social-login-box">
+              <img src="../IMG/img-google.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-facebook.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-git.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-x.png" class="sosmed-login-icon" alt="">
+            </div>
+          </div>
+      </form>
+
+      <!-- register form -->
+      <form class="form-box register-form">
+        <div class="form-title">
+          <span>Sign Up</span>
+          <!-- box regist form -->
         </div>
+        <div class="form-input">
+          <!-- username -->
+          <div class="input-box">
+            <input type="text" class="inputs input-field" placeholder="Username" />
+            <img src="../IMG/img-user.png" class="icon" alt="img-email" />
+          </div>
+          <!-- email -->
+          <div class="input-box">
+            <input type="email" class="inputs input-field" placeholder="Email" />
+            <img src="../IMG/img-email.png" class="icon" alt="img-email" />
+          </div>
+          <!-- password -->
+          <div class="input-box">
+            <input type="password" class="inputs input-field" placeholder="Password" />
+            <img src="../IMG/img-lock.png" class="icon" alt="img-password" />
+          </div>
+           <!-- forgot password -->
+           <div class="remember-me">
+           <input type="checkbox"id="remember-me-check">
+           <label for="checkbox">Remember Me</label>
+          </div>
+            <!-- login button -->
+            <div class="input-box">
+              <button type="submit" class="btn-login">Submit</button>
+            </div>
+          </div>
+          <div class="another-login">
+            <span>~~~ Or Login With ~~~</span>
+          </div>
+          <div class="sosmed-login">
+            <div class="social-login-box">
+              <img src="../IMG/img-google.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-facebook.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-git.png" class="sosmed-login-icon" alt="">
+            </div>
+            <div class="social-login-box">
+              <img src="../IMG/img-x.png" class="sosmed-login-icon" alt="">
+            </div>
+          </div>
       </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="../JS/JQuery.js"></script>
+    <script src="../JS/main.js"></script>
   </body>
 </html>

@@ -10,77 +10,123 @@ body {
   justify-content: center;
   padding: 0px;
   min-height: 100vh;
+  background-color: #212121;
 }
 
-.form-content {
+.form-container {
+  position: relative;
+  display: flex;
   width: 450px;
   height: 600px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   background-color: #2a2b38;
-  padding: 10px 60px;
+  padding: 10px 50px;
   border-radius: 30px;
+  overflow: hidden;
 }
-.form-header {
-  margin-top: 40px;
+.form-col {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.btn-box-1,
-.btn-box-2 {
-  border-radius: 50px;
-  color: #5e6681;
+.login-form,
+.register-form {
+  position: absolute;
+  width: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.login-form {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+.register-form {
+  left: 100%;
+  opacity: 0;
+  z-index: 0;
+}
+.active {
+  opacity: 1;
+  z-index: 2;
+  left: 0;
+}
+.btn-box {
+  display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-top: 30px;
+}
+.btn {
+  border-radius: 50px;
   padding: 8px 30px;
   font-size: 16px;
-  background-color: #ffeba7;
   font-weight: 500;
   border: none;
-  box-shadow: 0 5px 10px rgba(240, 240, 138, 0.4);
   cursor: pointer;
-
   transition: 0.2s;
 }
-.btn-box-1 {
+#login {
   background-color: #5e6681;
   color: #ffeba7;
 }
-.btn-box-1:hover {
-  opacity: 0.8;
-  box-shadow: 0 5px 10px rgba(240, 240, 138, 0.4);
+#register {
+  background-color: #ffeba7;
+  color: #5e6681;
+}
+
+#login:hover {
+  transform: scale(0.9);
+}
+
+#register:hover {
+  transform: scale(0.9);
 }
 .form-title {
   color: white;
   font-size: 37px;
   font-weight: 800;
-  margin-top: 25px;
-  padding-bottom: 5px;
+  padding-top: 25px;
+}
+
+.form-box {
+  position: absolute;
+  transform: translateX(-50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: 0.3s;
 }
 .form-input {
   width: 100%;
 }
-
-.input-field {
+.input-box {
+  position: relative;
+}
+.inputs {
   width: 100%;
-  height: 55px;
-  margin: 10px 0px;
-  border: none;
-  background-color: #1f2029;
+  height: 45px;
   border-radius: 50px;
+  margin: 13px 0;
+  border: none;
+}
+.input-field {
   font-size: 16px;
   padding: 0 40px 0 20px;
-  color: #d3d3d3;
-  outline-color: #ffeba7;
+  background-color: #1f2029;
+  outline: none;
+  color: white;
 }
 ::placeholder {
   color: white;
   font-size: 15px;
 }
-
-.input-box {
-  position: relative;
-}
 .input-box .icon {
   position: absolute;
   right: 20px;
-  top: 23px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 27px;
 }
 .forgot-password a {
@@ -97,6 +143,7 @@ body {
   border-radius: 50px;
   color: #5e6681;
   padding: 8px 30px;
+  margin-top: 15px;
   font-size: 16px;
   background-color: #ffeba7;
   font-weight: 500;
@@ -108,22 +155,30 @@ body {
 .btn-login:hover {
   background-color: #5e6681;
   color: #ffeba7;
+  transform: scalex(0.9);
 }
-.another-login h1 {
+.another-login {
+  display: flex;
+  justify-content: center;
   margin: 17px 0;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
-.sosmed-login img {
+.sosmed-login {
+  display: flex;
+  gap: 29px;
+  margin-top: 25px;
+}
+.social-login-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
   width: 40px;
-  padding: 4px;
-  border-radius: 50%;
   background-color: #5e6681;
-  opacity: 0.6;
-  cursor: pointer;
+  border-radius: 50%;
 }
-.sosmed-login img:hover {
-  background-color: wheat;
-  scale: 1.2;
-  opacity: 1;
+.social-login-box:hover {
+  background-color: #ffeba7;
+  transform: scale(0.8);
 }
